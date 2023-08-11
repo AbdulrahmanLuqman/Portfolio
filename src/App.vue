@@ -56,7 +56,7 @@ export default defineComponent({
                   <p class="text-[whitesmoke] mt-2 font-semibold z-[-999] w-full">Web Designer & Developer</p>
                 </div>
                 <div class="bg-[#ACACAC] h-[200px] w-[250px] rounded-[30px]">
-                  <img src="./assets/images/me.png" class="h-[200px] w-[250px] rounded-[30px]" alt="">
+                  <img src="./assets/images/Abdulrahman.jpg" class="h-[200px] w-[250px] rounded-[30px]" alt="">
                 </div>
                 <div class="space-y-2 text-center">
                   <a href="mailto:luqmanola60@gmail.com" class="text-[#F9F9F9] text-2xl">luqmanola60@gmail.com</a>
