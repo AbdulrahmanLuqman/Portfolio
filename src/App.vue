@@ -135,7 +135,7 @@ export default defineComponent({
                 <svg class="w-full" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 16 16"><path fill="white" d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v8A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-8A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1h-3zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5zm1.886 6.914L15 7.151V12.5a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5V7.15l6.614 1.764a1.5 1.5 0 0 0 .772 0zM1.5 4h13a.5.5 0 0 1 .5.5v1.616L8.129 7.948a.5.5 0 0 1-.258 0L1 6.116V4.5a.5.5 0 0 1 .5-.5z"/></svg>
                 <p class="uppercase text-sm">Resume</p>
             </div>
-            <p data-aos="fade-up" data-aos-duration="800" data-aos-offset="200"  data-aos-easing="ease-in-out" class="md:text-5xl text-3xl"> <span :class="!showExperience ? 'text-[#F31313]' : 'text-white'" @click="showExperience = false">Education</span> & <span :class="showExperience ? 'text-[#F31313]' : 'text-white'" @click="showExperience = true">Experience</span></p>
+            <p data-aos="fade-up" data-aos-duration="800" data-aos-offset="200"  data-aos-easing="ease-in-out" class="md:text-5xl text-3xl"> <span :class="!showExperience ? 'text-[#F31313]' : 'text-white underline'" @click="showExperience = false">Education</span> & <span :class="showExperience ? 'text-[#F31313]' : 'text-white underline'" @click="showExperience = true">Experience</span></p>
             <div>
                 <div class="flex flex-col" v-if="showExperience">
                     <div data-aos="fade-up" data-aos-duration="800" data-aos-offset="200"  data-aos-easing="ease-in-out" class="box relative border-l border-gray-600 px-16 h-fit md:h-fit md:h-[250px] space-y-6">
@@ -143,13 +143,13 @@ export default defineComponent({
                         <p class="years transition-text duration-500 text-lg">2023 - present</p>
                         <div class="space-y-4">
                             <div class="space-y-2">
-                                <p class="text-3xl">Frontend Developer</p>
+                                <p class="text-3xl">Software Developer</p>
                                 <p class="text-[#989898]">Dervac</p>
                             </div>
-                            <!-- <div class="space-y-2">
+                            <div class="space-y-2">
                                 <p class="text-3xl">Fullstack Developer</p>
                                 <p class="text-[#989898]">Kingsbridge</p>
-                            </div> -->
+                            </div>
                         </div>
                     </div>
     
@@ -158,7 +158,7 @@ export default defineComponent({
                         <p class="years transition-text duration-500 text-lg">2022 - present</p>
                         <div class="space-y-4">
                             <div class="space-y-2">
-                                <p class="text-3xl">Frontend Developer</p>
+                                <p class="text-3xl">Software Developer</p>
                                 <p class="text-[#989898]">W3School</p>
                             </div>
                         </div>
@@ -309,7 +309,7 @@ export default defineComponent({
                         <p class="code lg:text-base md:text-sm text-[10px] transition-all duration-200 text-black bg-[whitesmoke] px-4 py-2 rounded-[25px]">Javascript</p>
                       </div>
                     </div>
-                    <p><a target="_blank" href="https://abdulrahmanluqman.github.io/advice-generator/" class="hover:underline md:text-2xl">External Link - Advice Generator</a></p>
+                    <p><a target="_blank" href="https://abdulrahmanluqman.github.io/advice-generator/" class="underline md:text-2xl">External Link - Advice Generator</a></p>
                 </div>
     
                 <div data-aos="fade-right" data-aos-duration="800" data-aos-offset="200"  data-aos-easing="ease-in-out" class="space-y-2">
@@ -335,7 +335,7 @@ export default defineComponent({
                         <p class="code lg:text-base md:text-sm text-[10px] transition-all duration-200 text-black bg-[whitesmoke] px-4 py-2 rounded-[25px]">Javascript</p>
                       </div>
                     </div>
-                    <p class="project"><a target="_blank" href="https://anjorin.net" class="hover:underline md:text-2xl">External Link - Chief Technology Of Dervac(portfolio)</a></p>
+                    <p class="project"><a target="_blank" href="https://anjorin.net" class="underline md:text-2xl">External Link - Chief Technology Of Dervac(portfolio)</a></p>
                 </div>
             </div>
         </section>
