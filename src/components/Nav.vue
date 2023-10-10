@@ -173,10 +173,10 @@ export default defineComponent({
 </template>
 
 <style scoped>
-.triangle{
+/* .triangle{
    clip-path: polygon(0 81%, 0 87%, 9% 85%);
    height: 150px;
    width: 150px;
    background-color: red;
-}
+} */
 </style>
