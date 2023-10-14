@@ -16,23 +16,20 @@ export default defineComponent({
          showSideNavs: Store().$state.show,
       }
    },
-//    methods: {
-//     scrollToSection(sectionId) {
-//       const section = this.$refs[sectionId];
-//       if (section) {
-//         section.scrollIntoView({ behavior: 'smooth' });
-//       }
-//     }
-//   }
+   computed:{
+      inLightMode(){
+         return Store().inLightMode
+      }
+   }
 })
 </script>
 
 <template>
-   <div @click="showSideNavs = true" class="fixed lg:absolute right-6 md:right-20 lg:right-10 bg-[#010001] z-[500] top-12 border border-[#565656] px-4 py-[22px] rounded-[50%] space-y-[2px]">
-      <div class="bg-white w-[20px] h-[2px] z-[500]"></div>
-      <div class="bg-white w-[20px] h-[2px] z-[500]"></div>
+   <div @click="showSideNavs = true" class="fixed lg:absolute right-6 md:right-20 lg:right-10 bg-[#010001] z-[500] top-12 border border-[#565656] px-4 py-[22px] rounded-[50%] space-y-[2px]" :class="!inLightMode ? 'bg-transparent' : 'background'">
+      <div class="w-[20px] h-[2px] z-[500]" :class="!inLightMode ? 'bg-white' : 'bg-black'"></div>
+      <div class="w-[20px] h-[2px] z-[500]" :class="!inLightMode ? 'bg-white' : 'bg-black'"></div>
    </div>
-   <div class="block w-full md:w-[340px] z-[999] h-screen bg-[#191919] fixed top-0 transition-right duration-700" :class="showSideNavs ? 'right-0' : 'right-[-1000px]'">
+   <div class="block w-full md:w-[340px] z-[999] h-screen fixed top-0 transition-right duration-700" :class="showSideNavs ? 'right-0' : 'right-[-1000px]', !inLightMode ? 'bg-[#191919]' : 'background'">
       <!-- <div  @click="showSideNavs = false" class="w-fit absolute right-2 top-6 cursor-pointer">
          <svg class="text-white" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M6.4 19L5 17.6l5.6-5.6L5 6.4L6.4 5l5.6 5.6L17.6 5L19 6.4L13.4 12l5.6 5.6l-1.4 1.4l-5.6-5.6L6.4 19Z"/></svg>
       </div> -->
@@ -84,7 +81,7 @@ export default defineComponent({
    </div>
 
    <div class="sticky top-[140px] hidden lg:block">
-      <div class="w-14 py-4 mr-10 border border-[#565656] rounded-[50px] flex flex-col items-center gap-6">
+      <div class="w-14 py-4 mr-10 border border-[#565656] rounded-[50px] flex flex-col items-center gap-6" :class="!inLightMode ? 'bg-transparent' : 'background'">
       <a href="#home"  @mouseover="showHomeName = true" @mouseleave="showHomeName = false"  class="relative w-full">
          <svg class="w-full cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 16 16"><path fill="#565656" d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146ZM2.5 14V7.707l5.5-5.5l5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5Z"/></svg>
          <div class="absolute top-[2px] right-[53px]" @mouseover="showHomeName = true" @mouseleave="showHomeName = false" >
@@ -155,11 +152,11 @@ export default defineComponent({
          </div>
       </a>
 
-      <a href="#contact"  @mouseover="showContactName = true" @mouseleave="showContactName = false"  class="relative w-full">
+      <a href="#contact" @mouseover="showContactName = true" @mouseleave="showContactName = false"  class="relative w-full">
          <svg class="w-full cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="#565656" d="M14 11h7V6h-7v5Zm3.5-1.25L15 8V7l2.5 1.75L20 7v1l-2.5 1.75ZM2 21q-.825 0-1.413-.588T0 19V5q0-.825.588-1.413T2 3h20q.825 0 1.413.588T24 5v14q0 .825-.588 1.413T22 21H2Zm13.9-2H22V5H2v14h.1q1.05-1.875 2.9-2.938T9 15q2.15 0 4 1.063T15.9 19ZM9 14q1.25 0 2.125-.875T12 11q0-1.25-.875-2.125T9 8q-1.25 0-2.125.875T6 11q0 1.25.875 2.125T9 14Zm-4.45 5h8.9q-.85-.95-2.013-1.475T9 17q-1.275 0-2.425.525T4.55 19ZM9 12q-.425 0-.713-.288T8 11q0-.425.288-.713T9 10q.425 0 .713.288T10 11q0 .425-.288.713T9 12Zm3 0Z"/></svg>
          <div class="absolute top-[2px] right-[53px]" @mouseover="showContactName = true" @mouseleave="showContactName = false" >
-            <div class="relative bg-[#404042] rounded px-4 cursor-pointer" v-show="showContactName">
-               <p class="text-[12px] text-white cursor-pointer font-semibold">Contact</p>
+            <div class="relative  cursor-pointer" v-show="showContactName">
+               <p class="text-[12px] bg-[#404042] rounded px-4 w-fit text-white cursor-pointer font-semibold">Contact</p>
                <div class="triangle"></div>
             </div>
          </div>
@@ -167,16 +164,19 @@ export default defineComponent({
    </div>
    </div>
 
-   <div @click="showSideNavs = false" class="w-full h-screen bg-white fixed top-0 left-0 opacity-[0.2]" v-show="showSideNavs">
+   <div @click="showSideNavs = false" class="w-full h-screen fixed top-0 left-0 opacity-[0.2]" :class="!inLightMode ? 'bg-white' : 'bg-black'" v-show="showSideNavs">
 
    </div>
 </template>
 
 <style scoped>
 /* .triangle{
-   clip-path: polygon(0 81%, 0 87%, 9% 85%);
-   height: 150px;
-   width: 150px;
+   clip-path: polygon(0 81%, 0 87%, 99% 85%);
    background-color: red;
+   width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 87px solid red;
 } */
 </style>

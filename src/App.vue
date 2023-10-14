@@ -25,11 +25,6 @@ export default defineComponent({
         }
     },
     methods: {
-    //     toggleModes() {
-    //        Store().toggleModes();
-    //        Store().$state.inDarkMode = !Store().$state.inDarkMode
-    //        console.log(Store().$state.inDarkMode)
-    // },
         moveCarousel(direction){
             const newIndex = this.currentIndex + direction
 
@@ -38,12 +33,17 @@ export default defineComponent({
             }
             console.log(this.currentIndex)
         }
+    },
+    computed: {
+        inLightMode(){
+            return Store().inLightMode
+        }
     }
 })
 </script>
 
 <template>
-   <div class="flex gap-8 lg:gap-0 lg:flex-row flex-col justify-between bg-[#010001]">
+   <div class="flex gap-8 lg:gap-0 lg:flex-row flex-col justify-between transition-bg duration-700" :class="inLightMode ? 'bg-[whitesmoke ]' : 'bg-[#010001]'">
     <div>
         <Profile />
     </div>
@@ -59,6 +59,11 @@ export default defineComponent({
 <style>
 html{
   scroll-behavior: smooth;
+}
+.background{
+  background: linear-gradient(to bottom, #E4EAED, #F6F8F9);
+  border: none;
+  box-shadow: 10px 10px 12px rgb(217, 211, 211), -10px -10px 12px rgb(217, 211, 211);
 }
 .spin{
    animation: spin 7s linear infinite;

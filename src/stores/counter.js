@@ -23,7 +23,7 @@ export default function Store(){
         {
           name: 'Taiwo Balkis',
           image: '/src/assets/images/balkis.png',
-          post: 'Supervisor and Frontend Developer of',
+          post: 'Supervisor, Tech assistant and Frontend Developer of',
           company: 'Dervac',
           comment: 'Bringing fresh perspectives and going the extra mile—truly an outstanding collaborator.'
         },
