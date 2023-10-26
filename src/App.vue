@@ -9,41 +9,26 @@ export default defineComponent({
     components:{ Profile, Views, Nav},
     data(){
         return{
-            // inDarkMode: true
-            showHomeName: Store().$state.show,
-            showAboutName: Store().$state.show,
-            showResumeName: Store().$state.show,
-            showServicesName: Store().$state.show,
-            showSkillsName: Store().$state.show,
-            showPortfolioName: Store().$state.show,
-            showTestimonialName: Store().$state.show,
-            showContactName: Store().$state.show,
-            showSideNavs: Store().$state.show,
-            showExperience: true,
-            collaborators: Store().$state.collaborators,
-            currentIndex: 0
-        }
-    },
-    methods: {
-        moveCarousel(direction){
-            const newIndex = this.currentIndex + direction
-
-            if (newIndex >= 0 && newIndex < this.collaborators.length) {
-                this.currentIndex = newIndex
-            }
-            console.log(this.currentIndex)
+            // bgImage: Store().$state.backgroundimage
         }
     },
     computed: {
-        inLightMode(){
-            return Store().inLightMode
+        bgImage(){
+            return Store().$state.backgroundimage
         }
+    },
+    mounted(){
+        console.log(Store().$state.backgroundimage)
     }
 })
 </script>
 
 <template>
-   <div class="flex gap-8 lg:gap-0 lg:flex-row flex-col justify-between transition-bg duration-700" :class="inLightMode ? 'bg-[whitesmoke ]' : 'bg-[#010001]'">
+    <!-- <div :style="{backgroundImage: `url(${bgImage})`}" class="bg-image"> -->
+    <div class="bg-image">
+        <div class="bg-black fixed opacity-50 top-0 h-screen w-full"></div>
+    </div>
+   <div class="flex gap-8 lg:gap-0 lg:flex-row flex-col justify-between transition-bg duration-700">
     <div>
         <Profile />
     </div>
@@ -59,11 +44,6 @@ export default defineComponent({
 <style>
 html{
   scroll-behavior: smooth;
-}
-.background{
-  background: linear-gradient(to bottom, #E4EAED, #F6F8F9);
-  border: none;
-  box-shadow: 10px 10px 12px rgb(217, 211, 211), -10px -10px 12px rgb(217, 211, 211);
 }
 .spin{
    animation: spin 7s linear infinite;
@@ -98,5 +78,16 @@ html{
     background-color: #010001;
     color: whitesmoke;
     transition: all ease-in 700ms;
+}
+.bg-image{
+    background-image: url(./assets/images/earth-lines-sphere.jpg);
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    /* background-attachment: fixed; */
+    position: fixed;
+    top: 0;
+    z-index: -1;
 }
 </style>

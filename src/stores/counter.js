@@ -4,7 +4,8 @@ export default function Store(){
   return defineStore('elements', {
     state: () =>({
       show: false,
-      inLightMode: false,
+      backgroundimage: '../assets/images/water-waves.jpg',
+      color: '#F31313',
       collaborators: [
         {
           name: 'Sanni Abdulhameed',
@@ -50,10 +51,18 @@ export default function Store(){
         }
       ]
     }),
+    getters: {
+      getBackgroundImage() {
+        return this.backgroundimage;
+      }
+    },
     actions: {
       toggleModes(){
         this.inLightMode = !this.inLightMode
-      }
+      },
+      setBackgroundImage(imageUrl) {
+        this.backgroundimage = imageUrl;
+      },
     },
   })()
 }
