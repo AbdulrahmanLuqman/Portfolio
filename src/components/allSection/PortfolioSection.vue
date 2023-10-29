@@ -20,7 +20,7 @@ export default defineComponent({
         <p data-aos="fade-up" data-aos-duration="1000" data-aos-offset="200" data-aos-delay="100" data-aos-easing="ease-in-out" class="md:text-6xl text-3xl text-[whitesmoke]">Featured <span :style="{color: colors}">Projects</span></p>
         
         <div class="grid lg:gap-20 gap-10">
-            <a href="#" data-aos="fade-up" data-aos-duration="1000" data-aos-offset="200" data-aos-delay="100" data-aos-easing="ease-in-out" class="main space-y-2">
+            <a target="_blank" href="hub.dervac.com" data-aos="fade-up" data-aos-duration="1000" data-aos-offset="200" data-aos-delay="100" data-aos-easing="ease-in-out" class="main space-y-2">
                 <div class="website relative rounded-2xl overflow-hidden">
                   <img class="w-full" src="../../assets/images/dervac.png" alt="">
                   <div class="absolute top-0 bg-black h-full w-full opacity-25"></div>
@@ -29,7 +29,7 @@ export default defineComponent({
                     <p class="code lg:text-base md:text-sm text-[10px] transition-all duration-200 text-black bg-[whitesmoke] px-4 py-2 rounded-[25px]">Tailwind</p>
                   </div>
                 </div>
-                <p class="project hover:underline md:text-2xl text-[whitesmoke]">Deploying Soon - Dervac Hub Main Website</p>
+                <p class="project hover:underline md:text-2xl text-[whitesmoke]">External Link - Dervac Hub Main Website</p>
             </a>
 
             <a target="_blank" href="https://abdulrahmanluqman.github.io/advice-generator/" data-aos="fade-right" data-aos-duration="1000" data-aos-offset="200" data-aos-delay="100" data-aos-easing="ease-in-out" class="main space-y-2">
