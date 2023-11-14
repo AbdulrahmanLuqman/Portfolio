@@ -70,6 +70,18 @@ export default defineComponent({
                 </div>
                 <p class="project hover:underline md:text-2xl text-[whitesmoke]">External Link - Chief Technology Of Dervac(portfolio)</p>
               </a>
+
+              <a target="_blank" href="https://growthhorizon.vercel.app/" data-aos="fade-up" data-aos-duration="1000" data-aos-offset="200" data-aos-delay="100" data-aos-easing="ease-in-out" class="main space-y-2">
+                <div class="website relative rounded-2xl overflow-hidden">
+                  <img class="w-full" src="../../assets/images/growth_horizon.png" alt="">
+                  <div class="absolute top-0 bg-black h-full w-full opacity-25"></div>
+                  <div class="absolute flex gap-4 bottom-4 left-2">
+                    <p class="code lg:text-base md:text-sm text-[10px] transition-all duration-200 text-black bg-[whitesmoke] px-4 py-2 rounded-[25px]">Vue</p>
+                    <p class="code lg:text-base md:text-sm text-[10px] transition-all duration-200 text-black bg-[whitesmoke] px-4 py-2 rounded-[25px]">Tailwind</p>
+                  </div>
+                </div>
+                <p class="project hover:underline md:text-2xl text-[whitesmoke]">External Link - Growth Horizon(an earning platform)</p>
+              </a>
         </div>
     </section>
 </template>

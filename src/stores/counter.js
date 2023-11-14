@@ -4,7 +4,7 @@ export default function Store(){
   return defineStore('elements', {
     state: () =>({
       show: false,
-      backgroundimage: '../assets/images/water-waves.jpg',
+      backgroundimage: 'esther.png',
       color: '#F31313',
       collaborators: [
         {
@@ -51,18 +51,10 @@ export default function Store(){
         }
       ]
     }),
-    getters: {
-      getBackgroundImage() {
-        return this.backgroundimage;
-      }
-    },
     actions: {
       toggleModes(){
         this.inLightMode = !this.inLightMode
-      },
-      setBackgroundImage(imageUrl) {
-        this.backgroundimage = imageUrl;
-      },
+      }
     },
   })()
 }

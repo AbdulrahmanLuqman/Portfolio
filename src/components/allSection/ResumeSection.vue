@@ -55,7 +55,7 @@ export default defineComponent({
                             <p class="text-[#989898]">Dervac</p>
                         </div>
                         <div class="space-y-2">
-                            <p class="text-3xl text-[whitesmoke]">Fullstack Developer</p>
+                            <p class="text-3xl text-[whitesmoke]">Frontend Developer</p>
                             <p class="text-[#989898]">Kingsbridge</p>
                         </div>
                     </div>
@@ -73,6 +73,16 @@ export default defineComponent({
                 </div>
             </div>
             <div class="flex flex-col" v-else>
+                <div data-aos="fade-right" data-aos-duration="1000" data-aos-offset="200" data-aos-delay="100" data-aos-easing="ease-in-out" class="box relative border-l border-gray-600 px-16 h-fit md:h-fit md:h-[250px] space-y-6" @mouseover="year2019Hovered = true" @mouseleave="year2019Hovered = false">
+                    <div class="circle transition-bg duration-500 absolute left-[-6.6px] w-[13px] h-[13px] bg-[#989898] rounded-[50%]" :style="year2019Hovered ? { backgroundColor: colors, transition: 'all 0.5s' } : {backgroundColor: '#989898'}"></div>
+                    <p class="years transition-text duration-500 text-lg text-[whitesmoke]" :style="year2019Hovered ? { color: colors, transition: 'all 0.5s' } : {color: 'whitesmoke'}">2023 - present</p>
+                    <div class="space-y-4">
+                        <div class="space-y-2">
+                            <p class="text-3xl text-[whitesmoke]">University Education</p>
+                            <p class="text-[#989898]">Lasustech</p>
+                        </div>
+                    </div>
+                </div>
                 <div data-aos="fade-right" data-aos-duration="1000" data-aos-offset="200" data-aos-delay="100" data-aos-easing="ease-in-out" class="box relative border-l border-gray-600 px-16 h-fit md:h-fit md:h-[250px] space-y-6" @mouseover="year2019Hovered = true" @mouseleave="year2019Hovered = false">
                     <div class="circle transition-bg duration-500 absolute left-[-6.6px] w-[13px] h-[13px] bg-[#989898] rounded-[50%]" :style="year2019Hovered ? { backgroundColor: colors, transition: 'all 0.5s' } : {backgroundColor: '#989898'}"></div>
                     <p class="years transition-text duration-500 text-lg text-[whitesmoke]" :style="year2019Hovered ? { color: colors, transition: 'all 0.5s' } : {color: 'whitesmoke'}">2019 - 2021</p>

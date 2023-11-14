@@ -3,10 +3,20 @@ import { defineComponent } from 'vue'
 import Store from '../../stores/counter';
 
 export default defineComponent({
+   data(){
+      return{ 
+      }
+   },
    computed: {
       colors(){
          return Store().$state.color
+      },
+      image(){
+         return Store().$state.backgroundimage
       }
+   },
+   mounted(){
+      console.log(Store().$state.backgroundimage)
    }
 })
 
@@ -20,7 +30,7 @@ export default defineComponent({
             <p class="uppercase text-sm text-[whitesmoke]">Introduce</p>
          </div>
          <p data-aos="fade-up" data-aos-duration="1000" data-aos-offset="200" data-aos-delay="100" data-aos-easing="ease-in-out" class="md:text-6xl text-4xl text-[whitesmoke]">Say Hi from <span :style="{color: colors}">Abdulrahman</span>, A Software Developer</p>  
-         <p data-aos="fade-up" data-aos-duration="1000" data-aos-offset="200" data-aos-delay="100" data-aos-easing="ease-in-out" class="md:w-[450px] text-[#989898]">I develop and code beautifully simple things and i love what i do. Just simple like that!</p>
+         <p data-aos="fade-up" data-aos-duration="1000" data-aos-offset="200" data-aos-delay="100" data-aos-easing="ease-in-out" class="md:w-[450px] text-[#989898]">I'm an enthusiastic and passionate aspiring front-end web developer. I build websites that aren't just aesthetically pleasing, but also functional enough for great user experience.</p>
       </div>
 
       <div class="space-y-4 w-full">
@@ -46,6 +56,8 @@ export default defineComponent({
             </div>
          </div>
       </div>
+
+      <img :src="`../../assets/images/${image}`" alt="">
    </section>
 </template>
 

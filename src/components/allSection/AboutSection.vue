@@ -5,7 +5,7 @@
             <p class="uppercase text-sm text-[whitesmoke]">About</p>
         </div>
         <p data-aos="fade-up" data-aos-duration="1000" data-aos-offset="200" data-aos-delay="100" data-aos-easing="ease-in-out" class="md:text-6xl text-3xl text-[whitesmoke]">Every great development begin with an even <span :style="{color: colors}">better story</span></p>
-        <p data-aos="fade-up" data-aos-duration="1000" data-aos-offset="200" data-aos-delay="100" data-aos-easing="ease-in-out" class="text-[#989898]">Since beginning my journey as a developer nearly 3 years ago, I've collaborated with talented people to create digital products for both business and consumer use. I'm quietly confident, naturally curious, and perpetually working on improving my chopsone design problem at a time.</p>
+        <p data-aos="fade-up" data-aos-duration="1000" data-aos-offset="200" data-aos-delay="100" data-aos-easing="ease-in-out" class="text-[#989898]">Embarking on my developer journey almost two years ago, I've partnered with skilled individuals to craft digital solutions for diverse business and consumer needs. I exude quiet confidence, possess a natural curiosity, and am constantly honing my skills to tackle design challenges with precision.</p>
     </section>
 </template>
 

@@ -7,19 +7,6 @@ import Store from './stores/counter'
 
 export default defineComponent({
     components:{ Profile, Views, Nav},
-    data(){
-        return{
-            // bgImage: Store().$state.backgroundimage
-        }
-    },
-    computed: {
-        bgImage(){
-            return Store().$state.backgroundimage
-        }
-    },
-    mounted(){
-        console.log(Store().$state.backgroundimage)
-    }
 })
 </script>
 
