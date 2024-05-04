@@ -2,7 +2,12 @@
 import { defineComponent } from 'vue';
 import Store from '../stores/counter';
 
+import HomeSection from './allSection/HomeSection.vue'
+
 export default defineComponent({
+   components: {
+      HomeSection
+   },
    data(){
       return{
          showHomeName: Store().$state.show,
@@ -20,7 +25,8 @@ export default defineComponent({
       inLightMode(){
          return Store().inLightMode
       }
-   }
+   },
+
 })
 </script>
 
