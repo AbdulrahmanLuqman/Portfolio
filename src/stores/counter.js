@@ -64,6 +64,12 @@ export default function Store(){
           comment: "External Link - Reconxi(collaborated)"
         },
         {
+          image: "/images/ip-address-tracker.png",
+          technologies: ["React", "Tailwind"],
+          link: "https://ip-address-tracker-seven-sigma.vercel.app/",
+          comment: "External Link - IP Address Tracker"
+        },
+        {
           image: "/images/summa-ease-ai.png",
           technologies: ["React", "Tailwind"],
           link: "https://summar-ease-ai-zeta.vercel.app/",
