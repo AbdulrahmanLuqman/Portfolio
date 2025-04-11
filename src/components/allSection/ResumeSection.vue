@@ -6,6 +6,7 @@ export default defineComponent({
     data(){
         return{
             showExperience: true,
+            year2025Hovered: false,
             year2023Hovered: false,
             year2022Hovered: false,
             year2019Hovered: false,
@@ -48,7 +49,7 @@ export default defineComponent({
             <div class="flex flex-col" v-if="showExperience">
                 <div data-aos="fade-up" data-aos-duration="1000" data-aos-offset="200" data-aos-delay="100" data-aos-easing="ease-in-out" class="box relative border-l border-gray-600 px-16 h-fit md:h-fit md:h-[250px] space-y-6"  @mouseover="year2023Hovered = true" @mouseleave="year2023Hovered = false">
                     <div class="circle transition-bg duration-500 absolute left-[-6.6px] w-[13px] h-[13px] rounded-[50%]" :style="year2023Hovered ? { backgroundColor: colors, transition: 'all 0.5s' } : {backgroundColor: '#989898'}"></div>
-                    <p class="years transition-text duration-500 text-lg text-whitesmoke" :style="year2023Hovered ? { color: colors, transition: 'all 0.5s' } : {color: 'whitesmoke'}">2023 - present</p>
+                    <p class="years transition-text duration-500 text-lg text-whitesmoke" :style="year2023Hovered ? { color: colors, transition: 'all 0.5s' } : {color: 'whitesmoke'}">2023</p>
                     <div class="space-y-4">
                         <div class="space-y-2">
                             <p class="text-3xl text-[whitesmoke]">Frontend Developer</p>
@@ -63,11 +64,22 @@ export default defineComponent({
 
                 <div data-aos="fade-right" data-aos-duration="1000" data-aos-offset="200" data-aos-delay="100" data-aos-easing="ease-in-out" class="box relative border-l border-gray-600 px-16 h-fit md:h-fit md:h-[250px] space-y-6" @mouseover="year2022Hovered = true" @mouseleave="year2022Hovered = false">
                     <div class="circle transition-bg duration-500 absolute left-[-6.6px] w-[13px] h-[13px] bg-[#989898] rounded-[50%]" :style="year2022Hovered ? { backgroundColor: colors, transition: 'all 0.5s' } : {backgroundColor: '#989898'}"></div>
-                    <p class="years transition-text duration-500 text-lg text-[whitesmoke]"  :style="year2022Hovered ? { color: colors, transition: 'all 0.5s' } : {color: 'whitesmoke'}">2022 - present</p>
+                    <p class="years transition-text duration-500 text-lg text-[whitesmoke]"  :style="year2022Hovered ? { color: colors, transition: 'all 0.5s' } : {color: 'whitesmoke'}">2022</p>
                     <div class="space-y-4">
                         <div class="space-y-2">
                             <p class="text-3xl text-[whitesmoke]">Frontend Developer</p>
                             <p class="text-[#989898]">W3School</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div data-aos="fade-left" data-aos-duration="1000" data-aos-offset="200" data-aos-delay="100" data-aos-easing="ease-in-out" class="box relative border-l border-gray-600 px-16 h-fit md:h-fit md:h-[250px] space-y-6" @mouseover="year2025Hovered = true" @mouseleave="year2025Hovered = false">
+                    <div class="circle transition-bg duration-500 absolute left-[-6.6px] w-[13px] h-[13px] bg-[#989898] rounded-[50%]" :style="year2025Hovered ? { backgroundColor: colors, transition: 'all 0.5s' } : {backgroundColor: '#989898'}"></div>
+                    <p class="years transition-text duration-500 text-lg text-[whitesmoke]"  :style="year2025Hovered ? { color: colors, transition: 'all 0.5s' } : {color: 'whitesmoke'}">2025</p>
+                    <div class="space-y-4">
+                        <div class="space-y-2">
+                            <p class="text-3xl text-[whitesmoke]">Frontend Developer</p>
+                            <p class="text-[#989898]">HNG12</p>
                         </div>
                     </div>
                 </div>

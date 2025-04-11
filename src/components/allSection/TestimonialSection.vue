@@ -8,8 +8,8 @@
 
         <div class="carousel space-y-8">
             <div class="carousel-item">
-                <div v-for="(collaborator, index) in collaborators">
-                    <div v-show="currentIndex === index" class="w-full border border-2 border-gray-600 lg:p-14 p-10 rounded-[35px] space-y-4 border-white">
+                <div data-aos="fade-up" data-aos-duration="1000" data-aos-offset="200" data-aos-delay="100" data-aos-easing="ease-in-out" v-for="(collaborator, index) in collaborators">
+                    <div v-show="currentIndex === index" class="w-full border-2 border-gray-600 lg:p-14 p-10 rounded-[35px] space-y-4">
                         <div  class="flex items-center gap-4">
                             <div class="bg-[#ACACAC] w-fit p-[5px] rounded-[50%] overflow-hidden"><img :src=collaborator.image class="h-[70px] w-[70px]" alt=""></div>
                              <div class="flex flex-col gap-[2px]">
@@ -23,13 +23,13 @@
             </div>
 
             <div class="flex gap-6 items-center">
-                <button class="rounded-[50%] p-2" @click="moveCarousel(-1)" @mouseover="arrowLeftHovered = true" @mouseleave="arrowLeftHovered = false" :style="arrowLeftHovered ? { borderColor: colors, borderWidth: '1px', borderStyle: 'solid', transition: 'all 0.4s' } : {borderColor: '#565656', borderWidth: '1px', borderStyle: 'solid', transition: 'all 0.4s'}">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="white" d="M10 22L0 12L10 2l1.775 1.775L3.55 12l8.225 8.225L10 22Z"/></svg>
-                </button>
-                <p class="text-[whitesmoke]">{{ currentIndex + 1 }}<span class="opacity-20"> / {{ collaborators.length }}</span></p>
-                <button class="rounded-[50%] p-2" @click="moveCarousel(+1)" @mouseover="arrowRightHovered = true" @mouseleave="arrowRightHovered = false" :style="arrowRightHovered ? { borderColor: colors, borderWidth: '1px', borderStyle: 'solid', transition: 'all 0.4s' } : {borderColor: '#565656', borderWidth: '1px', borderStyle: 'solid', transition: 'all 0.4s'}">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="white" d="M8.025 22L6.25 20.225L14.475 12L6.25 3.775L8.025 2l10 10l-10 10Z"/></svg>
-                </button>
+              <button data-aos="fade-left" data-aos-duration="1000" data-aos-offset="200" data-aos-delay="100" data-aos-easing="ease-in-out" class="rounded-[50%] p-2" @click="moveCarousel(-1)" @mouseover="arrowLeftHovered = true" @mouseleave="arrowLeftHovered = false" :style="arrowLeftHovered ? { borderColor: colors, borderWidth: '1px', borderStyle: 'solid', transition: 'all 0.4s' } : {borderColor: '#565656', borderWidth: '1px', borderStyle: 'solid', transition: 'all 0.4s'}">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="white" d="M10 22L0 12L10 2l1.775 1.775L3.55 12l8.225 8.225L10 22Z"/></svg>
+              </button>
+              <p data-aos="fade-up" data-aos-duration="1000" data-aos-offset="200" data-aos-delay="100" data-aos-easing="ease-in-out" class="text-[whitesmoke]">{{ currentIndex + 1 }}<span class="opacity-20"> / {{ collaborators.length }}</span></p>
+              <button data-aos="fade-right" data-aos-duration="1000" data-aos-offset="200" data-aos-delay="100" data-aos-easing="ease-in-out" class="rounded-[50%] p-2" @click="moveCarousel(+1)" @mouseover="arrowRightHovered = true" @mouseleave="arrowRightHovered = false" :style="arrowRightHovered ? { borderColor: colors, borderWidth: '1px', borderStyle: 'solid', transition: 'all 0.4s' } : {borderColor: '#565656', borderWidth: '1px', borderStyle: 'solid', transition: 'all 0.4s'}">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="white" d="M8.025 22L6.25 20.225L14.475 12L6.25 3.775L8.025 2l10 10l-10 10Z"/></svg>
+              </button>
             </div>
         </div>
     </section>

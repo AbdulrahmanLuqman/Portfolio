@@ -27,7 +27,7 @@ export default defineComponent({
             <div class="space-y-2">
                 <div class="space-y-4">
                     <p class="text-2xl text-[whitesmoke]">Web Development</p>
-                    <p class="text-[#989898] text-sm">I build live websites with Javascript or Vue</p>
+                    <p class="text-[#989898] text-sm">I build live websites with React/Next</p>
                 </div>
                 <p class="projects text-sm text-[whitesmoke]"><a href="#portfolio">5 projects</a></p>
             </div>

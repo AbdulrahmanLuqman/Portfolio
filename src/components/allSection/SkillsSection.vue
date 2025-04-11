@@ -43,19 +43,29 @@
                     <p class="text-4xl" :style="{color: colors}">55%</p>
                 </div>
 
-                <div  data-aos="fade-up" data-aos-duration="1000" data-aos-offset="200" data-aos-delay="100" data-aos-easing="ease-in-out" class="rounded-[90px] h-[250px] px-4 space-y-4 flex flex-col items-center justify-between py-10 bg-transparent" @mouseover="vueHovered = true" @mouseleave="vueHovered = false" :style="vueHovered ? { borderColor: colors, borderWidth: '1px', borderStyle: 'solid', transition: 'all 0.4s' } : {borderColor: '#565656', borderWidth: '1px', borderStyle: 'solid', transition: 'all 0.4s'}">
+                <div  data-aos="fade-left" data-aos-duration="1000" data-aos-offset="200" data-aos-delay="100" data-aos-easing="ease-in-out" class="rounded-[90px] h-[250px] px-4 space-y-4 flex flex-col items-center justify-between py-10 bg-transparent" @mouseover="vueHovered = true" @mouseleave="vueHovered = false" :style="vueHovered ? { borderColor: colors, borderWidth: '1px', borderStyle: 'solid', transition: 'all 0.4s' } : {borderColor: '#565656', borderWidth: '1px', borderStyle: 'solid', transition: 'all 0.4s'}">
                     <img class="w-[100px]" src="../../assets/images/vue.png" alt="">
-                    <p class="text-4xl" :style="{color: colors}">70%</p>
+                    <p class="text-4xl" :style="{color: colors}">20%</p>
                 </div>
 
-                <div  data-aos="fade-up" data-aos-duration="1000" data-aos-offset="200" data-aos-delay="100" data-aos-easing="ease-in-out" class="rounded-[90px] h-[250px] px-4 space-y-4 flex flex-col items-center justify-between py-10 bg-transparent" @mouseover="vueHovered = true" @mouseleave="vueHovered = false" :style="vueHovered ? { borderColor: colors, borderWidth: '1px', borderStyle: 'solid', transition: 'all 0.4s' } : {borderColor: '#565656', borderWidth: '1px', borderStyle: 'solid', transition: 'all 0.4s'}">
+                <div  data-aos="fade-down" data-aos-duration="1000" data-aos-offset="200" data-aos-delay="100" data-aos-easing="ease-in-out" class="rounded-[90px] h-[250px] px-4 space-y-4 flex flex-col items-center justify-between py-10 bg-transparent" @mouseover="reactHovered = true" @mouseleave="reactHovered = false" :style="reactHovered ? { borderColor: colors, borderWidth: '1px', borderStyle: 'solid', transition: 'all 0.4s' } : {borderColor: '#565656', borderWidth: '1px', borderStyle: 'solid', transition: 'all 0.4s'}">
                     <img class="w-[100px]" src="../../assets/images/react.png" alt="">
-                    <p class="text-4xl" :style="{color: colors}">75%</p>
+                    <p class="text-4xl" :style="{color: colors}">90%</p>
                 </div>
 
-                <div  data-aos="fade-up" data-aos-duration="1000" data-aos-offset="200" data-aos-delay="100" data-aos-easing="ease-in-out" class="rounded-[90px] h-[250px] px-4 space-y-4 flex flex-col items-center justify-between py-10 bg-transparent" @mouseover="githubHovered = true" @mouseleave="githubHovered = false" :style="githubHovered ? { borderColor: colors, borderWidth: '1px', borderStyle: 'solid', transition: 'all 0.4s' } : {borderColor: '#565656', borderWidth: '1px', borderStyle: 'solid', transition: 'all 0.4s'}">
+                <div  data-aos="fade-left" data-aos-duration="1000" data-aos-offset="200" data-aos-delay="100" data-aos-easing="ease-in-out" class="rounded-[90px] h-[250px] px-4 space-y-4 flex flex-col items-center justify-between py-10 bg-transparent" @mouseover="nextHovered = true" @mouseleave="nextHovered = false" :style="nextHovered ? { borderColor: colors, borderWidth: '1px', borderStyle: 'solid', transition: 'all 0.4s' } : {borderColor: '#565656', borderWidth: '1px', borderStyle: 'solid', transition: 'all 0.4s'}">
+                    <img class="w-[200px]" src="../../assets/images/next.png" alt="">
+                    <p class="text-4xl" :style="{color: colors}">90%</p>
+                </div>
+
+                <div  data-aos="fade-right" data-aos-duration="1000" data-aos-offset="200" data-aos-delay="100" data-aos-easing="ease-in-out" class="rounded-[90px] h-[250px] px-4 space-y-4 flex flex-col items-center justify-between py-10 bg-transparent" @mouseover="githubHovered = true" @mouseleave="githubHovered = false" :style="githubHovered ? { borderColor: colors, borderWidth: '1px', borderStyle: 'solid', transition: 'all 0.4s' } : {borderColor: '#565656', borderWidth: '1px', borderStyle: 'solid', transition: 'all 0.4s'}">
                     <img class="w-[100px]" src="../../assets/images/github.png" alt="">
                     <p class="text-4xl" :style="{color: colors}">89%</p>
+                </div>
+
+                <div  data-aos="fade-right" data-aos-duration="1000" data-aos-offset="200" data-aos-delay="100" data-aos-easing="ease-in-out" class="rounded-[90px] h-[250px] px-4 space-y-4 flex flex-col items-center justify-between py-10 bg-transparent" @mouseover="githubHovered = true" @mouseleave="githubHovered = false" :style="githubHovered ? { borderColor: colors, borderWidth: '1px', borderStyle: 'solid', transition: 'all 0.4s' } : {borderColor: '#565656', borderWidth: '1px', borderStyle: 'solid', transition: 'all 0.4s'}">
+                    <img class="w-[100px]" src="../../assets/images/figma.png" alt="">
+                    <p class="text-4xl" :style="{color: colors}">60%</p>
                 </div>
             </div>
         </div>
@@ -77,6 +87,8 @@ export default defineComponent({
             jsHovered: false,
             jqueryHovered: false,
             vueHovered: false,
+            reactHovered: false,
+            nextHovered: false,
             githubHovered: false,
 
         }
